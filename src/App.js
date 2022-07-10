@@ -1,11 +1,39 @@
-import './App.css';
+import React from 'react';
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 
-function App() {
+import InfoForAll from './component/info_for_all';
+import Products from './component/products';
+import Profile from './component/profile';
+
+const App = () => {
+
   return (
-    <div className="App">
-      <h2>react_router_lifecycle_hoc_examples</h2>
-    </div>
+
+      <Router>
+      <div>
+      <header>
+       header <br/> 
+           <Link to="/">InfoForAll</Link> <br/>
+           <Link to="/products">Products</Link> <br/>
+           <Link to="/profile">Profile</Link> <br/>
+           {/* <Link to={{
+             pathname: '/profile'
+           }}>Profile</Link> <br/> */}
+      <hr/>
+    </header> 
+      <h2>Routes</h2>
+      <Routes>
+        <Route path="/" exact component={InfoForAll}/>
+        <Route path="/products" component={Products}/>
+        <Route path="/profile" component={Profile}/>
+        </Routes>
+
+        </div>
+    </Router>
   );
-}
+};
+
 
 export default App;
+
+ 
