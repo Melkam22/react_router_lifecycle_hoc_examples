@@ -1,34 +1,35 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Link, Route } from 'react-router-dom';
 
-import InfoForAll from './component/info_for_all';
-import Products from './component/products';
-import Profile from './component/profile';
+import InfoForAll from './Components/info_for_all';
+import Products from './Components/products';
+import Profile from './Components/profile';
 
 const App = () => {
 
   return (
 
       <Router>
-      <div>
-      <header>
+        <nav>
+        <ul>
        header <br/> 
-           <Link to="/">InfoForAll</Link> <br/>
-           <Link to="/products">Products</Link> <br/>
-           <Link to="/profile">Profile</Link> <br/>
+           <li><Link to="/"> InfoForAll</Link></li>  <br/>
+           <li><Link to="/products"> Products</Link></li>  <br/>
+           <li><Link to="/profile"> Profile</Link></li>  <br/>
+          
            {/* <Link to={{
              pathname: '/profile'
            }}>Profile</Link> <br/> */}
-      <hr/>
-    </header> 
+    </ul> 
+        </nav>
+       
       <h2>Routes</h2>
       <Routes>
-        <Route path="/" exact component={InfoForAll}/>
-        <Route path="/products" component={Products}/>
-        <Route path="/profile" component={Profile}/>
-        </Routes>
+        <Route path="/" exact element={ <InfoForAll />}/>
+        <Route path="/products" element={<Products />}/>
+        <Route path="/profile" element={<Profile />}/>
+      </Routes>
 
-        </div>
     </Router>
   );
 };
@@ -36,4 +37,3 @@ const App = () => {
 
 export default App;
 
- 
