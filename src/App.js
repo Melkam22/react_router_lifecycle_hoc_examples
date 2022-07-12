@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Link, Route } from 'react-router-dom';
 import InfoForAll from './Components/info_for_all';
 import Products from './Components/products';
 import Profile from './Components/profile';
+import Error from './Components/For_o_ForPage';
 
 const App = () => {
 
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/" exact element={ <InfoForAll />}/>
         <Route path="/products" element={<Products />}/>
         <Route path="/profile" element={<Profile />}/>
+        <Route path="*" element={<Error />}/>
       </Routes>
 
     </Router>

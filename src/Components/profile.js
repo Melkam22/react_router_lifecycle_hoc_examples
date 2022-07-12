@@ -1,15 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
-const Profile = () => {
-  console.log('profile')
+function Profile() {
+  let navigate = useNavigate();
   return (
     <div>
-     <Link to="/profile">Bring me to /profile ...</Link> 
-      
+      Profile page
+       <button onClick={()=>navigate("/products")}>switch</button>
     </div>
   );
 };
+
+
 
 export default Profile;
