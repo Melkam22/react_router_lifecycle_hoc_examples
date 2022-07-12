@@ -1,12 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 function Profile() {
   let navigate = useNavigate();
+  let {loggedName} = useParams();
   return (
     <div>
-      Profile page
+      Wel-come {loggedName} to your page! <br/>
        <button onClick={()=>navigate("/products")}>switch</button>
     </div>
   );

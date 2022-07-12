@@ -28,7 +28,7 @@ const App = () => {
       <Routes>
         <Route path="/" exact element={ <InfoForAll />}/>
         <Route path="/products" element={<Products />}/>
-        <Route path="/profile" element={<Profile />}/>
+        <Route path="/profile:loggedName" element={<Profile />}/>
         <Route path="*" element={<Error />}/>
       </Routes>
 
