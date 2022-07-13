@@ -1,30 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 
 import InfoForAll from './Components/info_for_all';
 import Products from './Components/products';
 import Profile from './Components/profile';
 import Error from './Components/For_o_ForPage';
+import StyledNavbar from './Components/StyledNavbar';
 
 const App = () => {
 
   return (
 
-      <Router>
-        <nav>
-        <ul>
-       header <br/> 
-           <li><Link to="/"> InfoForAll</Link></li>  <br/>
-           <li><Link to="/products"> Products</Link></li>  <br/>
-           <li><Link to="/profile"> Profile</Link></li>  <br/>
-          
-           {/* <Link to={{
-             pathname: '/profile'
-           }}>Profile</Link> <br/> */}
-    </ul> 
-        </nav>
+      <Router className="router">
+        
+        <StyledNavbar/>
        
-      <h2>Routes</h2>
+      <hr/>
       <Routes>
         <Route path="/" exact element={ <InfoForAll />}/>
         <Route path="/products" element={<Products />}/>

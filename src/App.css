@@ -2,4 +2,24 @@
   text-align: center;
 }
 
- 
+.nav{  
+  width: 100vw;
+  height: auto;
+}
+
+.ul{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style-type: none;
+}
+
+.link{
+  color: var(red);
+}
+
+.active {
+  color: var(blue);
+}
